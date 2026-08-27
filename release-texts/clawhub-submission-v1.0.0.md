@@ -1,7 +1,7 @@
 > **Name:** clawvision  
 > **Version:** 1.0.0  
 > **License:** MIT  
-> **Homepage:** https://github.com/openclaw/skills/clawvision  
+> **Homepage:** https://github.com/monaxamo/clawvision  
 > **Tags:** visualization, summary, html, sessions, codex, markdown, powerpoint, sessions_history, node_inference  
 > **Author:** Maximius  
 

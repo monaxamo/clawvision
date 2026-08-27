@@ -50,8 +50,9 @@ python scripts/generate_visual.py \
 
 ## Ссылки
 
-- GitHub: https://github.com/openclaw/skills/clawvision
+- GitHub: https://github.com/monaxamo/clawvision
 - clawhub: https://clawhub.ai/skills/clawvision
+- Релиз 1.0.0: https://github.com/monaxamo/clawvision/releases/tag/v1.0.0
 
 ---
 

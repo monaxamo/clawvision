@@ -11,7 +11,8 @@
 
 Работает полностью локально: Playwright + python-pptx, без внешних API.
 
-GitHub → https://github.com/openclaw/skills/clawvision
+GitHub → https://github.com/monaxamo/clawvision
+Релиз 1.0.0 → https://github.com/monaxamo/clawvision/releases/tag/v1.0.0
 clawhub → https://clawhub.ai/skills/clawvision
 
 На скриншоте — реальная сессия по запуску vibe.egetech.ru.

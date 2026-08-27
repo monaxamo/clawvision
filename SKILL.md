@@ -1,11 +1,11 @@
 ---
 name: "clawvision"
-description: "Generate visual HTML summaries, Markdown, and PowerPoint from OpenClaw session history."
+description: "ClawVision 1.0 — generate visual HTML summaries, Markdown, and PowerPoint from OpenClaw session history."
 metadata:
   version: 1.0.0
   author: Maximius
   tags: [visualization, summary, html, sessions, codex, markdown, powerpoint]
-  homepage: https://github.com/openclaw/skills/clawvision
+  homepage: https://github.com/monaxamo/clawvision
   license: MIT
 allowed-tools:
   - sessions_history
@@ -18,7 +18,7 @@ allowed-tools:
 user-invocable: true
 ---
 
-# ClawVision
+# ClawVision 1.0
 
 Turn an OpenClaw chat session into a clean, tabbed HTML infographic — like a Codex `$visualize` card, but local. Also exports to Markdown and PowerPoint.
 
@@ -86,3 +86,8 @@ Transcript:
 
 - If the history contains sensitive content, summarize it generically or ask the user first.
 - Do not call external APIs with the transcript.
+
+## Roadmap
+
+- **ClawVision 1.0** — current stable version: HTML/PNG/Markdown/PowerPoint summaries, language switcher, theme toggle, export buttons.
+- **ClawVision 2.0** — planned: session analytics (message stats, tool usage, topic/entity extraction, insights, CSS-only charts).
