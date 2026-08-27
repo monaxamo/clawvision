@@ -1,0 +1,49 @@
+{
+  "title": "ClawVision Skill",
+  "subtitle": "From Codex $visualize to a local summary generator for OpenClaw",
+  "main_takeaway": "User saw the $visualize skill in Codex and asked for an OpenClaw equivalent we could publish on clawhub. I built a live skill that turns session history into a tabbed HTML card.",
+  "format_takeaway": "The discussion moved from idea to MVP: define the format, create a pending skill, write the renderer, test on two real sessions, translate to English.",
+  "next_takeaway": "Next step is to create a GitHub repo and submit the skill to clawhub.",
+  "flow": [
+    {"label": "Codex $visualize", "sub": "Idea source"},
+    {"label": "→", "sub": ""},
+    {"label": "ClawVision", "sub": "OpenClaw skill"},
+    {"label": "→", "sub": ""},
+    {"label": "clawhub", "sub": "Publish"}
+  ],
+  "metrics": [
+    {"title": "🎯 Goal", "text": "Turn OpenClaw session history into a clean, tabbed HTML card."},
+    {"title": "🔧 Approach", "text": "Use sessions_history + node_inference + local Playwright renderer."},
+    {"title": "📤 Output", "text": "Self-contained HTML, Markdown, PowerPoint, and PNG screenshots."}
+  ],
+  "dos": [
+    "Keep tabs clear: takeaway, format, built, next.",
+    "One main idea per screen.",
+    "Use cards and flow diagrams instead of walls of text.",
+    "Match the conversation language."
+  ],
+  "donts": [
+    "Leak secrets from the session.",
+    "Overload cards instead of structure.",
+    "Add external dependencies to HTML.",
+    "Force English when the chat was in another language."
+  ],
+  "checklist": [
+    {"text": "Pending skill in skill_workshop", "status": "ready"},
+    {"text": "HTML template with tabs and inline CSS", "status": "ready"},
+    {"text": "Working example on current dialog", "status": "ready"},
+    {"text": "Renderer script for HTML + PNG", "status": "ready"},
+    {"text": "Tested on a second real session", "status": "ready"},
+    {"text": "Translated to English", "status": "ready"},
+    {"text": "Markdown and PowerPoint export", "status": "ready"},
+    {"text": "Language switcher EN/RU/ZH", "status": "ready"},
+    {"text": "Dark mode toggle", "status": "ready"},
+    {"text": "Published on clawhub", "status": "pending"}
+  ],
+  "next_steps": [
+    "Create a GitHub repository for the skill.",
+    "Upload SKILL.md, scripts/generate_visual.py, and README.md.",
+    "Submit the repo link to clawhub.",
+    "Add usage screenshots to the README."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "ClawVision Mini-Course Plan",
+  "subtitle": "How to build a free vibe-coding course on top of vibe.egetech.ru",
+  "main_takeaway": "Best format is a hybrid email course + Telegram channel + site lessons: 7 lessons, each linking to existing site material with one practical assignment.",
+  "format_takeaway": "The discussion moved from request to full plan: audit existing content, compare formats, pick platforms, design conversion funnel and metrics.",
+  "next_takeaway": "Next step is a landing page on the site plus a 7-lesson email sequence, mirrored on Telegram.",
+  "flow": [
+    {"label": "Request", "sub": "Course based on vibe.egetech.ru"},
+    {"label": "→", "sub": ""},
+    {"label": "Audit", "sub": "5 courses + glossary + column"},
+    {"label": "→", "sub": ""},
+    {"label": "Format", "sub": "Email + Telegram + site"},
+    {"label": "→", "sub": ""},
+    {"label": "Platforms", "sub": "Stepik, GetCourse, Skillspace"},
+    {"label": "→", "sub": ""},
+    {"label": "Funnel", "sub": "Free → paid product"}
+  ],
+  "metrics": [
+    {"title": "🎯 Goal", "text": "Turn existing articles into a paced 7-lesson course."},
+    {"title": "🔧 Approach", "text": "Content audit → format selection → platform comparison → funnel and metrics."},
+    {"title": "📤 Output", "text": "Course structure, conversion plan, recommended tech stack."}
+  ],
+  "dos": [
+    "Pace content: one lesson, one topic.",
+    "Add a practical assignment to every lesson.",
+    "Collect email + Telegram for double capture.",
+    "Place soft CTAs in lessons 3, 5, and 7."
+  ],
+  "donts": [
+    "Overload users with too much content at once.",
+    "Launch video/YouTube as the main format from day one.",
+    "Use GetCourse only for a free course — too expensive.",
+    "Forget Russian ad labeling rules in Telegram."
+  ],
+  "checklist": [
+    {"text": "Audit existing course-like materials", "status": "ready"},
+    {"text": "Choose course format", "status": "ready"},
+    {"text": "Compare platforms", "status": "ready"},
+    {"text": "Funnel and metrics", "status": "ready"},
+    {"text": "Landing page on vibe.egetech.ru", "status": "pending"},
+    {"text": "Set up email sequence", "status": "pending"},
+    {"text": "Publish lessons on Telegram", "status": "pending"}
+  ],
+  "next_steps": [
+    "Create a landing page with a subscription form.",
+    "Set up 7 emails in Mailganer / UniSender / Yandex 360.",
+    "Slice site articles into course lessons.",
+    "Mirror lessons on Telegram with a hashtag.",
+    "After 50+ completions, publish a structured version on Stepik."
+  ]
+}
