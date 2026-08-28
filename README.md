@@ -3,13 +3,15 @@
 Generate visual HTML summaries, Markdown, and PowerPoint from OpenClaw session history.
 
 [![ClawHub](https://img.shields.io/badge/ClawHub-clawvision-blue)](https://clawhub.ai/monaxamo/skills/clawvision)
-[![Version](https://img.shields.io/badge/version-1.0.3-green)](https://github.com/monaxamo/clawvision/releases)
+[![Version](https://img.shields.io/badge/version-1.0.4-green)](https://github.com/monaxamo/clawvision/releases)
 
 ---
 
 ## What it does
 
 ClawVision turns an OpenClaw chat session into a clean, tabbed HTML infographic — like a Codex `$visualize` card, but local. It also exports to Markdown and a redesigned, visual PowerPoint deck.
+
+New in **1.0.4**: **Summary Design Specification** step + **5 aesthetic presets** (`minimal`, `editorial`, `retro`, `luxury`, `playful`) for both HTML and PowerPoint.
 
 ![ClawVision demo](clawvision_demo_en.png)
 
@@ -26,6 +28,8 @@ ClawVision turns an OpenClaw chat session into a clean, tabbed HTML infographic 
 - **EN / RU / ZH language switcher**.
 - **Light / dark theme toggle**.
 - **Export buttons** for Markdown and PowerPoint right inside the card.
+- **5 aesthetic presets** — minimal, editorial, retro, luxury, playful — each with unique colors, fonts, rounding, and shadows.
+- **Summary Design Specification** — lock in language, preset, accent color, font, layout, and export formats before rendering.
 - **PNG screenshots**: one default + one per tab.
 - **Markdown export** and **PowerPoint deck export** with visual, card-based design.
 - Fully local: no external APIs for rendering; uses Playwright + `python-pptx`.
@@ -47,7 +51,8 @@ python scripts/generate_visual.py \
   --summary summary.json \
   --output ./out \
   --png --md --pptx \
-  --lang en
+  --lang en \
+  --preset minimal
 ```
 
 Outputs:
@@ -57,6 +62,16 @@ Outputs:
 - `out/<slug>.pptx`
 - `out/<slug>.png`
 - `out/<slug>_tab1.png` … `out/<slug>_tab4.png`
+
+### Presets
+
+| Preset | Best for | Accent | Font | Rounding | Shadow |
+|---|---|---|---|---|---|
+| `minimal` | Clean technical summaries | blue/grey | Inter | medium | subtle |
+| `editorial` | Long-form insights | burgundy/navy | Georgia | small | flat |
+| `retro` | Nostalgia, games | orange/brown | Space Grotesk | large | hard |
+| `luxury` | Finance, premium | gold/black | Playfair Display | tiny | soft |
+| `playful` | Education, social | purple/green | Nunito | huge | bouncy |
 
 ---
 
@@ -113,7 +128,7 @@ git clone https://github.com/monaxamo/clawvision.git
 
 ## Roadmap
 
-- **1.0** — visual summaries, language switcher, theme toggle, export formats.
+- **1.0.4** — Summary Design Specification + 5 aesthetic presets for HTML/PPTX.
 - **2.0** — session analytics: message stats, tool usage, topic/entity extraction, CSS-only charts, insights.
 
 ---
