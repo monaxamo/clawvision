@@ -3,7 +3,7 @@
 Generate visual HTML summaries, Markdown, and PowerPoint from OpenClaw session history.
 
 [![ClawHub](https://img.shields.io/badge/ClawHub-clawvision-blue)](https://clawhub.ai/monaxamo/skills/clawvision)
-[![Version](https://img.shields.io/badge/version-1.0.4-green)](https://github.com/monaxamo/clawvision/releases)
+[![Version](https://img.shields.io/badge/version-1.0.5-green)](https://github.com/monaxamo/clawvision/releases)
 
 ---
 
@@ -33,6 +33,23 @@ New in **1.0.4**: **Summary Design Specification** step + **5 aesthetic presets*
 - **PNG screenshots**: one default + one per tab.
 - **Markdown export** and **PowerPoint deck export** with visual, card-based design.
 - Fully local: no external APIs for rendering; uses Playwright + `python-pptx`.
+
+---
+
+## Changelog
+
+### 1.0.5
+- Fixed missing `:root` CSS variables in generated HTML (hotfix for v1.0.4 presets).
+
+### 1.0.4
+- Added Summary Design Specification step.
+- Added 5 aesthetic presets for HTML and PowerPoint.
+
+### 1.0.3
+- Redesigned PowerPoint export to match HTML card.
+
+### 1.0.0
+- Initial release.
 
 ---
 
@@ -128,7 +145,7 @@ git clone https://github.com/monaxamo/clawvision.git
 
 ## Roadmap
 
-- **1.0.4** — Summary Design Specification + 5 aesthetic presets for HTML/PPTX.
+- **1.0.5** — CSS variable fix + Summary Design Specification + 5 aesthetic presets.
 - **2.0** — session analytics: message stats, tool usage, topic/entity extraction, CSS-only charts, insights.
 
 ---
@@ -142,3 +159,4 @@ git clone https://github.com/monaxamo/clawvision.git
 ## License
 
 MIT
+
