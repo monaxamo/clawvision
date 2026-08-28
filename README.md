@@ -1,30 +1,46 @@
-# ClawVision 1.0
+# ClawVision
 
 Generate visual HTML summaries, Markdown, and PowerPoint from OpenClaw session history.
 
+[![ClawHub](https://img.shields.io/badge/ClawHub-clawvision-blue)](https://clawhub.ai/monaxamo/skills/clawvision)
+[![Version](https://img.shields.io/badge/version-1.0.3-green)](https://github.com/monaxamo/clawvision/releases)
+
+---
+
 ## What it does
 
-ClawVision turns an OpenClaw conversation into a self-contained, tabbed HTML card — like a Codex `$visualize` card, but local.
+ClawVision turns an OpenClaw chat session into a clean, tabbed HTML infographic — like a Codex `$visualize` card, but local. It also exports to Markdown and a redesigned, visual PowerPoint deck.
 
-Output format:
+![ClawVision demo](clawvision_demo_en.png)
 
-- **Main takeaway** — the single most important conclusion.
-- **Format** — how the discussion was structured, with do's and don'ts.
-- **What we built** — checklist of outcomes.
-- **Next steps** — what to do next.
+---
 
-Each card also renders a flow diagram, metric cards, EN/RU/ZH language switcher, light/dark theme toggle, and **Export Markdown / Export PowerPoint** buttons.
+## Features
+
+- **Self-contained HTML cards** with 4 tabs:
+  - Main takeaway
+  - Format
+  - What we built
+  - Next steps
+- **Flow diagram** and **metric cards** for each summary.
+- **EN / RU / ZH language switcher**.
+- **Light / dark theme toggle**.
+- **Export buttons** for Markdown and PowerPoint right inside the card.
+- **PNG screenshots**: one default + one per tab.
+- **Markdown export** and **PowerPoint deck export** with visual, card-based design.
+- Fully local: no external APIs for rendering; uses Playwright + `python-pptx`.
+
+---
 
 ## Requirements
 
 - Python 3.10+
-- `playwright` (`pip install playwright` and `playwright install chromium`)
+- Playwright (`pip install playwright && playwright install chromium`)
 - `python-pptx` (`pip install python-pptx`)
 
-## Usage
+---
 
-1. Export your conversation summary as JSON matching the schema below.
-2. Run the generator:
+## Usage
 
 ```bash
 python scripts/generate_visual.py \
@@ -34,51 +50,79 @@ python scripts/generate_visual.py \
   --lang en
 ```
 
-3. Get `out/<slug>.html`, `out/<slug>.md`, `out/<slug>.pptx`, and `out/<slug>_tab*.png`.
+Outputs:
 
-## JSON schema
+- `out/<slug>.html`
+- `out/<slug>.md`
+- `out/<slug>.pptx`
+- `out/<slug>.png`
+- `out/<slug>_tab1.png` … `out/<slug>_tab4.png`
+
+---
+
+## Example summary JSON
 
 ```json
 {
-  "title": "Short title in conversation language",
-  "subtitle": "One-line context",
-  "main_takeaway": "The single most important conclusion",
-  "format_takeaway": "How the discussion was structured",
-  "next_takeaway": "What the next move should be",
+  "title": "OpenClaw skill design session",
+  "subtitle": "Building ClawVision 1.0",
+  "main_takeaway": "A local, privacy-first visual summary tool is viable and fast.",
+  "format_takeaway": "Structured conversation with clear deliverables.",
+  "next_takeaway": "Publish the skill and gather feedback.",
   "flow": [
-    {"label": "Step 1", "sub": "what happened"},
+    {"label": "Idea", "sub": "Codex $visualize"},
     {"label": "→", "sub": ""},
-    {"label": "Step 2", "sub": "what happened"}
+    {"label": "Design", "sub": "HTML card + exports"},
+    {"label": "→", "sub": ""},
+    {"label": "Build", "sub": "generate_visual.py"}
   ],
   "metrics": [
-    {"title": "Goal", "text": "..."},
-    {"title": "Approach", "text": "..."},
-    {"title": "Output", "text": "..."}
+    {"title": "Goal", "text": "Visual summary from chat"},
+    {"title": "Approach", "text": "Local renderer"},
+    {"title": "Output", "text": "HTML + MD + PPTX + PNG"}
   ],
-  "dos": ["good practice 1", "good practice 2"],
-  "donts": ["risk 1", "risk 2"],
+  "dos": ["Keep summaries local", "Confirm sensitive content before exporting"],
+  "donts": ["Expose private data", "Run on vague requests"],
   "checklist": [
-    {"text": "Item name", "status": "ready|pending|blocked"}
+    {"text": "HTML renderer", "status": "ready"},
+    {"text": "Markdown export", "status": "ready"},
+    {"text": "PowerPoint export", "status": "ready"}
   ],
-  "next_steps": ["action 1", "action 2"]
+  "next_steps": ["Publish to ClawHub", "Collect user feedback"]
 }
 ```
 
-## Outputs
+See `example_summary_en.json` and `course_session_summary_en.json` for full examples.
 
-- `*.html` — self-contained tabbed card with language switcher and theme toggle.
-- `*.md` — plain Markdown summary.
-- `*.pptx` — 7-slide PowerPoint deck.
-- `*.png` — default screenshot of the first tab.
-- `*_tab*.png` — one screenshot per tab.
+---
 
-## Languages
+## Install as an OpenClaw skill
 
-The card UI supports **EN / RU / ZH**. Pass `--lang en|ru|zh` to control tab labels, export buttons, and badge text.
+```bash
+openclaw skills install clawvision
+```
 
-## Version
+Or install from source:
 
-This is **ClawVision 1.0**. Future version 2.0 will add session analytics: message stats, tool usage, topic extraction, and insights.
+```bash
+git clone https://github.com/monaxamo/clawvision.git
+# Place the skill folder in your OpenClaw workspace skills directory
+```
+
+---
+
+## Roadmap
+
+- **1.0** — visual summaries, language switcher, theme toggle, export formats.
+- **2.0** — session analytics: message stats, tool usage, topic/entity extraction, CSS-only charts, insights.
+
+---
+
+## Related
+
+- **[clawvision-plus](https://github.com/monaxamo/clawvision-plus)** — companion plugin with PDF export, OG image generation, and Telegram sharing.
+
+---
 
 ## License
 
